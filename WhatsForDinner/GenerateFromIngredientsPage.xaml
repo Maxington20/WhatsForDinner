@@ -16,12 +16,13 @@
             <ColumnDefinition Width="Auto" />
         </Grid.ColumnDefinitions>
 
-        <Label Text="Recipes:"
+        <Label Text="Recipes"
                FontSize="Medium"
                Grid.Row="0"
                Grid.ColumnSpan="2"
                FontAttributes="Bold"
-               TextColor="Black" />
+               TextColor="Black" 
+               HorizontalOptions="Center"/>
 
         <CollectionView x:Name="RecipesListView"
                     Grid.Row="1"
@@ -30,7 +31,10 @@
                 <DataTemplate>
                     <Frame Padding="10"
                        BackgroundColor="#FFA500"
-                       Margin="0,5">
+                       Margin="0,5"
+                       HasShadow="False"
+                       BorderColor="Transparent"
+                       HorizontalOptions="FillAndExpand">
                         <Grid>
                             <Grid.GestureRecognizers>
                                 <TapGestureRecognizer Tapped="OnRecipeTapped" />
@@ -51,7 +55,8 @@
                Padding="0"
                Margin="0,5"
                CornerRadius="5"
-               BackgroundColor="Black">
+               BackgroundColor="LightGray"
+               HasShadow="False">
             <Grid Padding="1">
                 <Frame Padding="3"
                        CornerRadius="5"
@@ -59,6 +64,7 @@
                        HasShadow="false">
                     <Editor x:Name="IngredientsEditor"
                             AutoSize="TextChanges"
+                            TextColor="Black"
                             BackgroundColor="White"
                             Placeholder="Enter comma separated ingredients"/>
                 </Frame>
