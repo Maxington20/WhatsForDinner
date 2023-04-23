@@ -4,12 +4,30 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:WhatsForDinner"
-    Shell.FlyoutBehavior="Disabled"
-    BackgroundColor="LightSeaGreen">
+    BackgroundColor="#FFA500">
 
+
+    <!-- Main content -->
     <ShellContent
-        Title="Generate From Ingredients"
+        Title="Profile"
         ContentTemplate="{DataTemplate local:MainPage}"
         Route="MainPage"/>
+
+    <!-- Fly-out menu items -->
+    <Shell.FlyoutHeader>
+        <Label Text="Menu"
+               FontSize="Large"
+               FontAttributes="Bold"
+               TextColor="White"
+               HorizontalOptions="Center"
+               VerticalOptions="Center" />
+    </Shell.FlyoutHeader>
+
+    <FlyoutItem Title="Generate From Ingredients"
+                Route="GenerateFromIngredientsPage">
+        <ShellContent ContentTemplate="{DataTemplate local:GenerateFromIngredientsPage}" />
+    </FlyoutItem>
+   
+    
 
 </Shell>

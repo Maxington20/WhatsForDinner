@@ -49,6 +49,13 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Remove="Resources\Images\Davis.png" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiXaml Update="GenerateFromIngredientsPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="RecipeDetailsPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
