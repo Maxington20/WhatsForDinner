@@ -56,7 +56,7 @@
 	  <MauiXaml Update="Pages\GenerateFromIngredientsPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="RecipeDetailsPage.xaml">
+	  <MauiXaml Update="Pages\RecipeDetailsPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>
