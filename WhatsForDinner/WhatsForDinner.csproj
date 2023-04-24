@@ -53,16 +53,12 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiXaml Update="GenerateFromIngredientsPage.xaml">
+	  <MauiXaml Update="Pages\GenerateFromIngredientsPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="RecipeDetailsPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	</ItemGroup>
-
-	<ItemGroup>
-	  <Folder Include="Pages\" />
 	</ItemGroup>
 
 </Project>

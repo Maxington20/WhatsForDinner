@@ -1,4 +1,4 @@
-using static WhatsForDinner.GenerateFromIngredientsPage;
+using static WhatsForDinner.Pages.GenerateFromIngredientsPage;
 using static WhatsForDinner.MainPage;
 
 namespace WhatsForDinner;
