@@ -1,7 +1,8 @@
-using static WhatsForDinner.GenerateFromIngredientsPage;
-using static WhatsForDinner.MainPage;
+using static WhatsForDinner.Pages.GenerateFromIngredientsPage;
+using static WhatsForDinner.Pages.MainPage;
+using WhatsForDinner;
 
-namespace WhatsForDinner;
+namespace WhatsForDinner.Pages;
 
 public partial class RecipeDetailsPage : ContentPage
 {

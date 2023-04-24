@@ -3,6 +3,7 @@
     x:Class="WhatsForDinner.AppShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:pages="clr-namespace:WhatsForDinner.Pages"
     xmlns:local="clr-namespace:WhatsForDinner"
     BackgroundColor="#FFA500">
 
@@ -10,7 +11,7 @@
     <!-- Main content -->
     <ShellContent
         Title="Profile"
-        ContentTemplate="{DataTemplate local:MainPage}"
+        ContentTemplate="{DataTemplate pages:MainPage}"
         Route="MainPage"/>
 
     <!-- Fly-out menu items -->
@@ -25,7 +26,7 @@
 
     <FlyoutItem Title="Generate From Ingredients"
                 Route="GenerateFromIngredientsPage">
-        <ShellContent ContentTemplate="{DataTemplate local:GenerateFromIngredientsPage}" />
+        <ShellContent ContentTemplate="{DataTemplate pages:GenerateFromIngredientsPage}" />
     </FlyoutItem>
    
     
