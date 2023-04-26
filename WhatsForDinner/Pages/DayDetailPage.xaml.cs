@@ -15,13 +15,18 @@ public partial class DayDetailPage : ContentPage
 
     private async void OnPlanMealButtonClicked(object sender, EventArgs e)
     {
-        var mealOptions = new string[] { "Breakfast", "Lunch", "Dinner" };
-        string selectedMeal = await DisplayActionSheet("Plan Meal", "Cancel", null, mealOptions);
-
-        if (selectedMeal != null)
+        var customActionSheet = new CustomActionSheet();
+        MessagingCenter.Subscribe<CustomActionSheet, string>(this, "CustomActionSheetResult", (sender, arg) =>
         {
-            // Handle the selected meal (e.g., navigate to a new page or update the UI)
-            Console.WriteLine($"Selected meal: {selectedMeal}");
-        }
+            string selectedMeal = arg;
+
+            if (selectedMeal != null)
+            {
+                // Handle the selected meal (e.g., navigate to a new page or update the UI)
+                Console.WriteLine($"Selected meal: {selectedMeal}");
+            }
+        });
+
+        await Navigation.PushModalAsync(customActionSheet);
     }
 }
