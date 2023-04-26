@@ -22,9 +22,12 @@ public partial class DayDetailPage : ContentPage
 
             if (selectedMeal != null)
             {
-                // Handle the selected meal (e.g., navigate to a new page or update the UI)
-                Console.WriteLine($"Selected meal: {selectedMeal}");
+                // Navigate to the MealOptionsPage with the selected meal
+                Navigation.PushAsync(new MealOptionsPage(selectedMeal));
             }
+
+            // Unsubscribe the message after it's handled
+            MessagingCenter.Unsubscribe<CustomActionSheet, string>(this, "CustomActionSheetResult");
         });
 
         await Navigation.PushModalAsync(customActionSheet);
