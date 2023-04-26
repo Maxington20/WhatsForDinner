@@ -23,6 +23,7 @@
             Padding="20"
             Spacing="20"
             VerticalOptions="Center">
+
             <Frame
                 HeightRequest="40"
                 Padding="0"
@@ -39,6 +40,21 @@
                     HorizontalOptions="CenterAndExpand"
                     VerticalOptions="Center" />
             </Frame>
+
+            <StackLayout
+                HeightRequest="40"
+                Padding="0"
+                BackgroundColor="White"               
+                HorizontalOptions="FillAndExpand">
+                <Label
+                    Text="Test Recipe"
+                    FontSize="18"
+                    TextColor="Black"
+                    BackgroundColor="Transparent"
+                    HorizontalOptions="CenterAndExpand"
+                    VerticalOptions="Center" />
+            </StackLayout>
+
             <Frame
                 HeightRequest="40"
                 Padding="0"
@@ -55,6 +71,21 @@
                     HorizontalOptions="CenterAndExpand"
                     VerticalOptions="Center" />
             </Frame>
+
+            <StackLayout
+                HeightRequest="40"
+                Padding="0"
+                BackgroundColor="White"                
+                HorizontalOptions="FillAndExpand">
+                <Label
+                    Text="Test Recipe"
+                    FontSize="18"
+                    TextColor="Black"
+                    BackgroundColor="Transparent"
+                    HorizontalOptions="CenterAndExpand"
+                    VerticalOptions="Center" />
+            </StackLayout>
+
             <Frame
                 HeightRequest="40"
                 Padding="0"
@@ -71,17 +102,32 @@
                     HorizontalOptions="CenterAndExpand"
                     VerticalOptions="Center" />
             </Frame>
+
+            <StackLayout
+                HeightRequest="40"
+                Padding="0"
+                BackgroundColor="White"              
+                HorizontalOptions="FillAndExpand">
+                <Label
+                    Text="Test Recipe"
+                    FontSize="18"
+                    TextColor="Black"
+                    BackgroundColor="Transparent"
+                    HorizontalOptions="CenterAndExpand"
+                VerticalOptions="Center" />
+            </StackLayout>
+
         </VerticalStackLayout>
 
         <Button
-            Grid.Row="1"
-            Margin="20,10,20,10"
-            Text="Plan Meal"
-            FontSize="24"
-            TextColor="White"
-            BackgroundColor="#FFA500"
-            CornerRadius="8"
-            HorizontalOptions="FillAndExpand"
-            Clicked="OnPlanMealButtonClicked" />
+        Grid.Row="1"
+        Margin="20,10,20,10"
+        Text="Plan Meal"
+        FontSize="24"
+        TextColor="White"
+        BackgroundColor="#FFA500"
+        CornerRadius="8"
+        HorizontalOptions="FillAndExpand"
+        Clicked="OnPlanMealButtonClicked" />
     </Grid>
 </ContentPage>
