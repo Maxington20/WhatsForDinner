@@ -15,6 +15,6 @@ public partial class DayDetailPage : ContentPage
 
     private async void OnPlanMealButtonClicked(object sender, EventArgs e)
     {
-        await Navigation.PushAsync(new CustomActionSheet());
+        await Navigation.PushAsync(new CustomActionSheet(SelectedDate));
     }
 }

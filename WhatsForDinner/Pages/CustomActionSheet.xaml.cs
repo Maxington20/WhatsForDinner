@@ -2,9 +2,12 @@ namespace WhatsForDinner.Pages;
 
 public partial class CustomActionSheet : ContentPage
 {
-	public CustomActionSheet()
+    DateTime MealDate { get; set; }
+
+	public CustomActionSheet(DateTime selectedDate)
 	{
 		InitializeComponent();
+        MealDate = selectedDate;
 	}
 
     private async void OnBreakfastClicked(object sender, EventArgs e)
