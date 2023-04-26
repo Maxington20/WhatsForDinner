@@ -3,17 +3,14 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:controls="clr-namespace:WhatsForDinner.Controls"
              xmlns:calendar="clr-namespace:Syncfusion.Maui.Calendar;assembly=Syncfusion.Maui.Calendar"
-    x:Class="WhatsForDinner.Pages.MealCalendarPage"
+             x:Class="WhatsForDinner.Pages.MealCalendarPage"
              BackgroundColor="White"
-             Title="MealCalendarPage">
+             Title="Meal Calendar Page">
 
-    <calendar:SfCalendar x:Name="Calendar" 
-                         View="Month" 
-                         ShowActionButtons="True">
+    <calendar:SfCalendar x:Name="Calendar">
         <calendar:SfCalendar.MonthView>
 
-            <calendar:CalendarMonthView
-                TodayBackground="#FFA500">
+            <calendar:CalendarMonthView>
             </calendar:CalendarMonthView>
             
         </calendar:SfCalendar.MonthView>
