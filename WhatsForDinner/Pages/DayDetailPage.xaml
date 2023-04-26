@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="WhatsForDinner.Pages.DayDetailPage"
+             Title="{Binding SelectedDate, StringFormat='Meal Plan for {0:MMMM dd, yyyy}'}"
+             BackgroundColor="White">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Label">
+                <Setter Property="TextColor" Value="Black" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <VerticalStackLayout
+            Grid.Row="0"
+            Padding="20"
+            Spacing="20"
+            VerticalOptions="Center">
+            <Frame
+                HeightRequest="40"
+                Padding="0"
+                BackgroundColor="#FFA500"
+                CornerRadius="8"
+                HasShadow="True"
+                HorizontalOptions="FillAndExpand">
+                <Label
+                    Text="Breakfast"
+                    FontSize="24"
+                    FontAttributes="Bold"
+                    TextColor="White"
+                    BackgroundColor="Transparent"
+                    HorizontalOptions="CenterAndExpand"
+                    VerticalOptions="Center" />
+            </Frame>
+            <Frame
+                HeightRequest="40"
+                Padding="0"
+                BackgroundColor="#FFA500"
+                CornerRadius="8"
+                HasShadow="True"
+                HorizontalOptions="FillAndExpand">
+                <Label
+                    Text="Lunch"
+                    FontSize="24"
+                    FontAttributes="Bold"
+                    TextColor="White"
+                    BackgroundColor="Transparent"
+                    HorizontalOptions="CenterAndExpand"
+                    VerticalOptions="Center" />
+            </Frame>
+            <Frame
+                HeightRequest="40"
+                Padding="0"
+                BackgroundColor="#FFA500"
+                CornerRadius="8"
+                HasShadow="True"
+                HorizontalOptions="FillAndExpand">
+                <Label
+                    Text="Dinner"
+                    FontSize="24"
+                    FontAttributes="Bold"
+                    TextColor="White"
+                    BackgroundColor="Transparent"
+                    HorizontalOptions="CenterAndExpand"
+                    VerticalOptions="Center" />
+            </Frame>
+        </VerticalStackLayout>
+
+        <Button
+            Grid.Row="1"
+            Margin="20,10,20,10"
+            Text="Plan Meal"
+            FontSize="24"
+            TextColor="White"
+            BackgroundColor="#FFA500"
+            CornerRadius="8"
+            HorizontalOptions="FillAndExpand"
+            Clicked="OnPlanMealButtonClicked" />
+    </Grid>
+</ContentPage>

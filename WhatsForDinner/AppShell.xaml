@@ -28,7 +28,10 @@
                 Route="GenerateFromIngredientsPage">
         <ShellContent ContentTemplate="{DataTemplate pages:GenerateFromIngredientsPage}" />
     </FlyoutItem>
-   
-    
+
+    <FlyoutItem Title="Meal Calendar"
+                Route="MealCalendarPage">
+        <ShellContent ContentTemplate="{DataTemplate pages:MealCalendarPage}" />
+    </FlyoutItem>
 
 </Shell>
