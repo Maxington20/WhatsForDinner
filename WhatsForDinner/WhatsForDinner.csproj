@@ -53,6 +53,10 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <PackageReference Include="Syncfusion.Maui.Calendar" Version="21.1.41" />
+	</ItemGroup>
+
+	<ItemGroup>
 	  <MauiXaml Update="Pages\GenerateFromIngredientsPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

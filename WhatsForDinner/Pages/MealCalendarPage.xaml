@@ -2,18 +2,20 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:controls="clr-namespace:WhatsForDinner.Controls"
-             x:Class="WhatsForDinner.Pages.MealCalendarPage"
+             xmlns:calendar="clr-namespace:Syncfusion.Maui.Calendar;assembly=Syncfusion.Maui.Calendar"
+    x:Class="WhatsForDinner.Pages.MealCalendarPage"
              BackgroundColor="White"
              Title="MealCalendarPage">
-    <StackLayout>
-        <Label Text="Custom Calendar"
-               HorizontalOptions="Center"
-                VerticalOptions="Start"
-               FontSize="24"              
-               Margin="0,30,0,0" />
 
-        <controls:CustomCalendar
-               HorizontalOptions="Fill"
-               VerticalOptions="FillAndExpand" />
-    </StackLayout>
+    <calendar:SfCalendar x:Name="Calendar" 
+                         View="Month" 
+                         ShowActionButtons="True">
+        <calendar:SfCalendar.MonthView>
+
+            <calendar:CalendarMonthView
+                TodayBackground="#FFA500">
+            </calendar:CalendarMonthView>
+            
+        </calendar:SfCalendar.MonthView>
+    </calendar:SfCalendar>
 </ContentPage>
