@@ -23,11 +23,5 @@
                 BackgroundColor="#FFA500"
                 CornerRadius="8"
                 Clicked="OnGenerateRandomRecipeButtonClicked"/>
-        <Button Text="Back"
-                FontSize="24"
-                TextColor="White"
-                BackgroundColor="#FFA500"
-                CornerRadius="8"
-                Clicked="OnBackButtonClicked"/>
     </StackLayout>
 </ContentPage>

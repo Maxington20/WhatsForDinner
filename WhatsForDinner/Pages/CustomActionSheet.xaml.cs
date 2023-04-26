@@ -7,29 +7,28 @@ public partial class CustomActionSheet : ContentPage
 		InitializeComponent();
 	}
 
-    private void OnBreakfastClicked(object sender, System.EventArgs e)
+    private async void OnBreakfastClicked(object sender, EventArgs e)
     {
-        Close("Breakfast");
+        await Close("Breakfast");
     }
 
-    private void OnLunchClicked(object sender, System.EventArgs e)
+    private async void OnLunchClicked(object sender, EventArgs e)
     {
-        Close("Lunch");
+        await Close("Lunch");
     }
 
-    private void OnDinnerClicked(object sender, System.EventArgs e)
+    private async void OnDinnerClicked(object sender, EventArgs e)
     {
-        Close("Dinner");
+        await Close("Dinner");
     }
 
-    private void OnCancelClicked(object sender, System.EventArgs e)
+    private async void OnCancelClicked(object sender, EventArgs e)
     {
-        Close(null);
+        await Navigation.PopAsync();
     }
 
-    private async void Close(string result)
+    private async Task Close(string result)
     {
-        MessagingCenter.Send(this, "CustomActionSheetResult", result);
-        await Navigation.PopModalAsync();
+        await Navigation.PushAsync(new MealOptionsPage(result));
     }
 }

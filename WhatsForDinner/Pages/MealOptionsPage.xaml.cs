@@ -2,9 +2,14 @@ namespace WhatsForDinner.Pages;
 
 public partial class MealOptionsPage : ContentPage
 {
+    public string MealOfTheDay { get; set; }
+
+    public bool WasCancelled { get; private set; }
+
 	public MealOptionsPage(string result)
 	{
 		InitializeComponent();
+        MealOfTheDay = result;
 	}
 
     private void OnNewRecipeButtonClicked(object sender, System.EventArgs e)
@@ -20,10 +25,5 @@ public partial class MealOptionsPage : ContentPage
     private void OnGenerateRandomRecipeButtonClicked(object sender, System.EventArgs e)
     {
         // Handle the Generate Random Recipe button click
-    }
-
-    private async void OnBackButtonClicked(object sender, EventArgs e)
-    {
-        await Navigation.PopAsync();
     }
 }
