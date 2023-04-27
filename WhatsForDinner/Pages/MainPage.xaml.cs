@@ -15,8 +15,8 @@ public partial class MainPage : ContentPage
         Navigation.PushAsync(new SavedRecipesPage());
     }
 
-    private void Button_Clicked(object sender, EventArgs e)
+    private void OnTodaysMealsButtonClicked(object sender, EventArgs e)
     {
-
+        Navigation.PushAsync(new DayDetailPage(DateTime.Now));
     }
 }

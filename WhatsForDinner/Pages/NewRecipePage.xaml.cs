@@ -21,6 +21,21 @@ public partial class NewRecipePage : ContentPage
         BindingContext = this;
     }
 
+    public string TitleText
+    {
+        get
+        {
+            if (MealOfTheDay != null)
+            {
+                return $"{MealOfTheDay} {SelectedDate.ToString("ddd MMMM dd, yyyy")}";
+            }
+            else
+            {
+                return "New Recipe";
+            }
+        }
+    }
+
     private void OnSaveRecipeButtonClicked(object sender, EventArgs e)
     {
         if(string.IsNullOrWhiteSpace(RecipeNameEntry.Text) || string.IsNullOrWhiteSpace(IngredientsEditor.Text) || string.IsNullOrWhiteSpace(DirectionsEditor.Text))

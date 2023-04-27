@@ -19,7 +19,7 @@ public partial class MealOptionsPage : ContentPage
 
     private void OnSavedRecipesButtonClicked(object sender, System.EventArgs e)
     {
-        // Handle the Saved Recipes button click
+        Navigation.PushAsync(new SavedRecipesPage());
     }
 
     private void OnGenerateRandomRecipeButtonClicked(object sender, System.EventArgs e)

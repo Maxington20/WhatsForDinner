@@ -1,7 +1,7 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="WhatsForDinner.Pages.NewRecipePage"
-             Title="New Recipe"
+             Title="{Binding TitleText}"
              BackgroundColor="#f7f7f7">
     <StackLayout Margin="20">
         <Label Text="Recipe Name"
@@ -52,9 +52,6 @@
                 HeightRequest="50"
                 CornerRadius="25"
                 HorizontalOptions="FillAndExpand"
-                VerticalOptions="End" 
-                IsEnabled="{Binding Source={x:Reference RecipeNameEntry}, Path=Text.Length}
-                            and {Binding Source={x:Reference IngredientsEditor}, Path=Text.Length}
-                            and {Binding Source={x:Reference DirectionsEditor}, Path=Text.Length}" />
+                VerticalOptions="End"/>
     </StackLayout>
 </ContentPage>
