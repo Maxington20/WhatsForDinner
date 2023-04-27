@@ -23,6 +23,11 @@ public partial class NewRecipePage : ContentPage
 
     private void OnSaveRecipeButtonClicked(object sender, EventArgs e)
     {
+        if(string.IsNullOrWhiteSpace(RecipeNameEntry.Text) || string.IsNullOrWhiteSpace(IngredientsEditor.Text) || string.IsNullOrWhiteSpace(DirectionsEditor.Text))
+        {
+            DisplayAlert("Error", "Please enter a recipe name, ingredients, and directions.", "OK");
+            return;
+        }
         // Get the values from the input fields
         string recipeName = RecipeNameEntry.Text;
         string ingredients = IngredientsEditor.Text;

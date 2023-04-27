@@ -8,4 +8,15 @@ public partial class MainPage : ContentPage
     {
         InitializeComponent();       
     }
+
+    // navigate to saved recipes page when SavedRecipesButton is clicked
+    private void OnSavedRecipesButtonClicked(object sender, System.EventArgs e)
+    {
+        Navigation.PushAsync(new SavedRecipesPage());
+    }
+
+    private void Button_Clicked(object sender, EventArgs e)
+    {
+
+    }
 }

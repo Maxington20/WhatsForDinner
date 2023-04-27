@@ -42,6 +42,7 @@
                 VerticalOptions="StartAndExpand" />
 
         <Button Text="Save Recipe"
+                x:Name="SaveRecipeButton"
                 Clicked="OnSaveRecipeButtonClicked"
                 FontSize="Medium"
                 FontAttributes="Bold"
@@ -51,6 +52,9 @@
                 HeightRequest="50"
                 CornerRadius="25"
                 HorizontalOptions="FillAndExpand"
-                VerticalOptions="End" />
+                VerticalOptions="End" 
+                IsEnabled="{Binding Source={x:Reference RecipeNameEntry}, Path=Text.Length}
+                            and {Binding Source={x:Reference IngredientsEditor}, Path=Text.Length}
+                            and {Binding Source={x:Reference DirectionsEditor}, Path=Text.Length}" />
     </StackLayout>
 </ContentPage>

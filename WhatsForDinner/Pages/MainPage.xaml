@@ -35,10 +35,10 @@
                         TextColor="White"
                         BackgroundColor="#FFA500"
                         CornerRadius="25"
-                        HorizontalOptions="FillAndExpand"
-                        Command="{Binding ViewSavedRecipesCommand}"
+                        HorizontalOptions="FillAndExpand"                        
                         Grid.Column="0"
-                        Margin="0,0,5,0"/>
+                        Margin="0,0,5,0"
+                        Clicked="OnSavedRecipesButtonClicked"/>
 
                 <Button Text="Edit Profile"
                         FontSize="18"
