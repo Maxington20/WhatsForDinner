@@ -1,18 +1,53 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="WhatsForDinner.Pages.NewRecipePage"
-             Title="NewRecipePage"
-             BackgroundColor="White">
-    <StackLayout>
-        <Label Text="Recipe Name" />
-        <Entry x:Name="RecipeNameEntry" Placeholder="Enter recipe name" />
+             Title="New Recipe"
+             BackgroundColor="#f7f7f7">
+    <StackLayout Margin="20">
+        <Label Text="Recipe Name"
+               FontSize="Medium"
+               Margin="0,10,0,5"
+               TextColor="#333333" />
+        <Entry x:Name="RecipeNameEntry"
+               Placeholder="Enter recipe name"
+               PlaceholderColor="#cccccc"
+               TextColor="#333333"
+               FontSize="Medium" />
 
-        <Label Text="Ingredients" />
-        <Editor x:Name="IngredientsEditor" Placeholder="Enter ingredients" />
+        <Label Text="Ingredients"
+               FontSize="Medium"
+               Margin="0,10,0,5"
+               TextColor="#333333" />
+        <Editor x:Name="IngredientsEditor"
+                Placeholder="Enter ingredients"
+                PlaceholderColor="#cccccc"
+                TextColor="#333333"
+                FontSize="Medium"
+                HeightRequest="120"
+                VerticalOptions="StartAndExpand" />
 
-        <Label Text="Directions" />
-        <Editor x:Name="DirectionsEditor" Placeholder="Enter directions" />
+        <Label Text="Directions"
+               FontSize="Medium"
+               Margin="0,10,0,5"
+               TextColor="#333333" />
+        <Editor x:Name="DirectionsEditor"
+                Placeholder="Enter directions"
+                PlaceholderColor="#cccccc"
+                TextColor="#333333"
+                FontSize="Medium"
+                HeightRequest="120"
+                VerticalOptions="StartAndExpand" />
 
-        <Button Text="Save Recipe" Clicked="OnSaveRecipeButtonClicked" />
+        <Button Text="Save Recipe"
+                Clicked="OnSaveRecipeButtonClicked"
+                FontSize="Medium"
+                FontAttributes="Bold"
+                BackgroundColor="#007AFF"
+                TextColor="White"
+                Margin="0,20,0,0"
+                HeightRequest="50"
+                CornerRadius="25"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="End" />
     </StackLayout>
 </ContentPage>
