@@ -9,13 +9,10 @@ public partial class MealCalendarPage : ContentPage
 	public MealCalendarPage()
 	{
 		InitializeComponent();
-
-      
-
+     
         SfCalendar calendar = new SfCalendar();        
         this.Content = calendar;
         this.Calendar = calendar;
-        this.Calendar.ShowActionButtons = true;
         this.Calendar.TodayHighlightBrush = Color.FromRgba("#FFA500");
         this.Calendar.SelectionBackground = Color.FromRgba("#FFA500");
         this.Calendar.DoubleTapped += this.DateSelected;

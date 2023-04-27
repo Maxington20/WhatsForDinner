@@ -38,12 +38,12 @@
                VerticalOptions="Center"/>
     </Shell.FlyoutHeader>
 
-    <FlyoutItem Title="Meal Calendar"
+    <FlyoutItem Title="Calendar"
                 Route="MealCalendarPage">
         <ShellContent ContentTemplate="{DataTemplate pages:MealCalendarPage}" />
     </FlyoutItem>
 
-    <FlyoutItem Title="Generate From Ingredients"
+    <FlyoutItem Title="Generate Recipe"
                 Route="GenerateFromIngredientsPage">
         <ShellContent ContentTemplate="{DataTemplate pages:GenerateFromIngredientsPage}" />
     </FlyoutItem>

@@ -5,7 +5,7 @@
              xmlns:calendar="clr-namespace:Syncfusion.Maui.Calendar;assembly=Syncfusion.Maui.Calendar"
              x:Class="WhatsForDinner.Pages.MealCalendarPage"
              BackgroundColor="White"
-             Title="Meal Calendar Page">
+             Title="Meal Calendar">
 
     <calendar:SfCalendar x:Name="Calendar">
         <calendar:SfCalendar.MonthView>
