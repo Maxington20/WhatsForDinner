@@ -48,7 +48,7 @@
         <ShellContent ContentTemplate="{DataTemplate pages:GenerateFromIngredientsPage}" />
     </FlyoutItem>
 
-    <FlyoutItem Title="New Recipe"
+    <FlyoutItem Title="New Custom Recipe"
                 Route="NewRecipePage">
         <ShellContent ContentTemplate="{DataTemplate pages:NewRecipePage}" />
     </FlyoutItem>

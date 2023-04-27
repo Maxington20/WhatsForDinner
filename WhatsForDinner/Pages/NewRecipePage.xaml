@@ -3,26 +3,43 @@
              x:Class="WhatsForDinner.Pages.NewRecipePage"
              Title="{Binding TitleText}"
              BackgroundColor="White">
-    <StackLayout Margin="20">
+
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
         <Label Text="Recipe Name"
                FontSize="Medium"
-               Margin="0,10,0,5"
+               Margin="0,5,0,5"
                TextColor="#333333" 
                FontAttributes="Bold"/>
         <Entry x:Name="RecipeNameEntry"
+               Grid.Row="1"
                Placeholder="Enter recipe name"
                PlaceholderColor="#cccccc"
                TextColor="#333333"
                FontSize="Medium" 
                BackgroundColor="AliceBlue"/>
 
-        <Label Text="Ingredients"
+        <Grid Grid.Row="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <Label Text="Ingredients"
                FontSize="Medium"
-               Margin="0,10,0,5"
+               Margin="0,5,0,5"
                TextColor="#333333" 
                FontAttributes="Bold"/>
-        <Editor x:Name="IngredientsEditor"
+            <Editor x:Name="IngredientsEditor"
                 Placeholder="Enter ingredients"
+                Grid.Row="1"
                 PlaceholderColor="#cccccc"
                 TextColor="#333333"
                 FontSize="Medium"
@@ -30,12 +47,21 @@
                 VerticalOptions="StartAndExpand" 
                 BackgroundColor="AliceBlue"/>
 
-        <Label Text="Directions"
+        </Grid>
+
+        <Grid Grid.Row="3">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <Label Text="Directions"
                FontSize="Medium"
                Margin="0,10,0,5"
                TextColor="#333333" 
                FontAttributes="Bold"/>
-        <Editor x:Name="DirectionsEditor"
+            <Editor x:Name="DirectionsEditor"
+                Grid.Row="1"
                 Placeholder="Enter directions"
                 PlaceholderColor="#cccccc"
                 TextColor="#333333"
@@ -44,6 +70,7 @@
                 VerticalOptions="StartAndExpand" 
                 BackgroundColor="AliceBlue"/>
 
+        </Grid>
         <Button Text="Save Recipe"
                 x:Name="SaveRecipeButton"
                 Clicked="OnSaveRecipeButtonClicked"
@@ -55,6 +82,7 @@
                 HeightRequest="50"
                 CornerRadius="25"
                 HorizontalOptions="FillAndExpand"
-                VerticalOptions="End"/>
-    </StackLayout>
+                VerticalOptions="End"
+                Grid.Row="4"/>
+    </Grid>
 </ContentPage>
