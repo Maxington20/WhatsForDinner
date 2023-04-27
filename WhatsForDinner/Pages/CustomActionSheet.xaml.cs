@@ -33,6 +33,6 @@ public partial class CustomActionSheet : ContentPage
 
     private async Task Close(string result)
     {
-        await Navigation.PushAsync(new MealOptionsPage(result));
+        await Navigation.PushAsync(new MealOptionsPage(result, MealDate));
     }
 }

@@ -2,14 +2,14 @@ namespace WhatsForDinner.Pages;
 
 public partial class MealOptionsPage : ContentPage
 {
-    public string MealOfTheDay { get; set; }
+    public string MealOfTheDay { get; set; }   
+    public DateTime SelectedDate { get; set; }
 
-    public bool WasCancelled { get; private set; }
-
-	public MealOptionsPage(string result)
+	public MealOptionsPage(string result, DateTime selectedDate)
 	{
 		InitializeComponent();
         MealOfTheDay = result;
+        SelectedDate = selectedDate;
 	}
 
     private void OnNewRecipeButtonClicked(object sender, System.EventArgs e)
