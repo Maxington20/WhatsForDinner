@@ -1,3 +1,5 @@
+using static WhatsForDinner.Pages.GenerateFromIngredientsPage;
+
 namespace WhatsForDinner.Pages;
 
 public partial class NewRecipePage : ContentPage
@@ -26,6 +28,8 @@ public partial class NewRecipePage : ContentPage
         string ingredients = IngredientsEditor.Text;
         string directions = DirectionsEditor.Text;
 
+        Recipe recipe = new Recipe() { Name = recipeName, Ingredients = ingredients, Directions = directions };
+
         // Do something with the values
         // For example, you could save the recipe to a database or file
 
@@ -43,11 +47,25 @@ public partial class NewRecipePage : ContentPage
             Navigation.PushAsync(new DayDetailPage(SelectedDate));
         }
 
-        // else navigate back to the mainpage.xaml page
+        // else navigate to the savedrecipedpage
         else
         {
-            Application.Current.MainPage = new AppShell();
+            Navigation.PushAsync(new SavedRecipesPage());
         }
+
+        // else navigate to a new RecipeDetailsPage passing a Recipe object
+        //else
+        //{
+        //    Navigation.PushAsync(new RecipeDetailsPage(recipe));
+        //}
+
+        // navigates to profile page
+        //else
+        //{
+        //    Application.Current.MainPage = new AppShell();
+        //}
+
+
 
     }
 }

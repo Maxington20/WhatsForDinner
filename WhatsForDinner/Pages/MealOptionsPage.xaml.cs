@@ -24,6 +24,6 @@ public partial class MealOptionsPage : ContentPage
 
     private void OnGenerateRandomRecipeButtonClicked(object sender, System.EventArgs e)
     {
-        // Handle the Generate Random Recipe button click
+        Navigation.PushAsync(new GenerateFromIngredientsPage(MealOfTheDay, SelectedDate));
     }
 }
