@@ -35,5 +35,19 @@ public partial class NewRecipePage : ContentPage
         Console.WriteLine($"Directions: {directions}");
         Console.WriteLine($"Meal Of The Day: {MealOfTheDay}");
         Console.WriteLine($"Selected Date: {SelectedDate}");
+
+
+        if(MealOfTheDay != null)
+        {
+            // navigate to the DayDetailPage passing the selected date
+            Navigation.PushAsync(new DayDetailPage(SelectedDate));
+        }
+        
+        // else navigate back to the mainpage.xaml page
+        else
+        {
+            Navigation.PopAsync();
+        }
+     
     }
 }
