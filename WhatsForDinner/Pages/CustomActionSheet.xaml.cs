@@ -2,12 +2,13 @@ namespace WhatsForDinner.Pages;
 
 public partial class CustomActionSheet : ContentPage
 {
-    DateTime MealDate { get; set; }
+    public DateTime MealDate { get; set; }
 
 	public CustomActionSheet(DateTime selectedDate)
 	{
 		InitializeComponent();
         MealDate = selectedDate;
+        BindingContext = this;
 	}
 
     private async void OnBreakfastClicked(object sender, EventArgs e)
@@ -32,6 +33,6 @@ public partial class CustomActionSheet : ContentPage
 
     private async Task Close(string result)
     {
-        await Navigation.PushAsync(new MealOptionsPage(result));
+        await Navigation.PushAsync(new MealOptionsPage(result, MealDate));
     }
 }

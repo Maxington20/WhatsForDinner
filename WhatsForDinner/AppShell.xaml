@@ -5,8 +5,22 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:pages="clr-namespace:WhatsForDinner.Pages"
     xmlns:local="clr-namespace:WhatsForDinner"
-    BackgroundColor="#FFA500">
+    BackgroundColor="#FFA500"
+    FlyoutBackgroundColor="#FFA500">
 
+    <!-- Custom template for menu items -->
+    <Shell.ItemTemplate>
+        <DataTemplate>
+            <Grid Padding="16">
+                <Label Text="{Binding Title}"
+                       FontSize="20"
+                       FontAttributes="Bold"
+                       TextColor="White"
+                       HorizontalOptions="Start"
+                       VerticalOptions="Center"/>
+            </Grid>
+        </DataTemplate>
+    </Shell.ItemTemplate>
 
     <!-- Main content -->
     <ShellContent
@@ -21,17 +35,22 @@
                FontAttributes="Bold"
                TextColor="White"
                HorizontalOptions="Center"
-               VerticalOptions="Center" />
+               VerticalOptions="Center"/>
     </Shell.FlyoutHeader>
 
-    <FlyoutItem Title="Generate From Ingredients"
+    <FlyoutItem Title="Calendar"
+                Route="MealCalendarPage">
+        <ShellContent ContentTemplate="{DataTemplate pages:MealCalendarPage}" />
+    </FlyoutItem>
+
+    <FlyoutItem Title="Generate Recipe"
                 Route="GenerateFromIngredientsPage">
         <ShellContent ContentTemplate="{DataTemplate pages:GenerateFromIngredientsPage}" />
     </FlyoutItem>
 
-    <FlyoutItem Title="Meal Calendar"
-                Route="MealCalendarPage">
-        <ShellContent ContentTemplate="{DataTemplate pages:MealCalendarPage}" />
+    <FlyoutItem Title="New Custom Recipe"
+                Route="NewRecipePage">
+        <ShellContent ContentTemplate="{DataTemplate pages:NewRecipePage}" />
     </FlyoutItem>
 
 </Shell>

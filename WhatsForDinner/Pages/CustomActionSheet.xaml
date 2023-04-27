@@ -1,26 +1,26 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="WhatsForDinner.Pages.CustomActionSheet"
-             Title="{Binding MealDate, StringFormat='Meal Plan for {0:MMMM dd, yyyy}'}"
+             Title="{Binding MealDate, StringFormat='Plan Meal {0:ddd MMMM dd, yyyy}'}"
     BackgroundColor="White">
     <StackLayout Padding="20" Spacing="20" VerticalOptions="Center">
         <Button Text="Breakfast"
                 FontSize="24"
                 TextColor="White"
                 BackgroundColor="#FFA500"
-                CornerRadius="8"
+                CornerRadius="25"
                 Clicked="OnBreakfastClicked"/>
         <Button Text="Lunch"
                 FontSize="24"
                 TextColor="White"
                 BackgroundColor="#FFA500"
-                CornerRadius="8"
+                CornerRadius="25"
                 Clicked="OnLunchClicked"/>
         <Button Text="Dinner"
                 FontSize="24"
                 TextColor="White"
                 BackgroundColor="#FFA500"
-                CornerRadius="8"
+                CornerRadius="25"
                 Clicked="OnDinnerClicked"/>
     </StackLayout>
 

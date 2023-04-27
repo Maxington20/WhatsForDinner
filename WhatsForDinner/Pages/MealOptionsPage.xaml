@@ -9,19 +9,19 @@
                 FontSize="24"
                 TextColor="White"
                 BackgroundColor="#FFA500"
-                CornerRadius="8"
+                CornerRadius="25"
                 Clicked="OnNewRecipeButtonClicked"/>
         <Button Text="Saved Recipes"
                 FontSize="24"
                 TextColor="White"
                 BackgroundColor="#FFA500"
-                CornerRadius="8"
+                CornerRadius="25"
                 Clicked="OnSavedRecipesButtonClicked"/>
         <Button Text="Generate Random Recipe"
                 FontSize="24"
                 TextColor="White"
                 BackgroundColor="#FFA500"
-                CornerRadius="8"
+                CornerRadius="25"
                 Clicked="OnGenerateRandomRecipeButtonClicked"/>
     </StackLayout>
 </ContentPage>
