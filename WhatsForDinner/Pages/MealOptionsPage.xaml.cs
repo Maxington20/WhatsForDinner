@@ -14,7 +14,7 @@ public partial class MealOptionsPage : ContentPage
 
     private void OnNewRecipeButtonClicked(object sender, System.EventArgs e)
     {
-        // Handle the New Recipe button click
+        Navigation.PushAsync(new NewRecipePage(MealOfTheDay, SelectedDate));
     }
 
     private void OnSavedRecipesButtonClicked(object sender, System.EventArgs e)
