@@ -5,11 +5,17 @@ public partial class NewRecipePage : ContentPage
     public string MealOfTheDay { get; set; }
     public DateTime SelectedDate { get; set; }
 
+    public NewRecipePage()
+    {
+        InitializeComponent();
+        BindingContext = this;
+    }
+
     public NewRecipePage(string mealOfTheDay = null, DateTime? selectedDate = null)
     {
         InitializeComponent();
         MealOfTheDay = mealOfTheDay;
-        SelectedDate = selectedDate ?? DateTime.Now;
+        SelectedDate = selectedDate.HasValue ? selectedDate.Value : DateTime.Now;
         BindingContext = this;
     }
 

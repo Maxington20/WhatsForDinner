@@ -126,7 +126,7 @@
         FontSize="24"
         TextColor="White"
         BackgroundColor="#FFA500"
-        CornerRadius="8"
+        CornerRadius="25"
         HorizontalOptions="FillAndExpand"
         Clicked="OnPlanMealButtonClicked" />
     </Grid>

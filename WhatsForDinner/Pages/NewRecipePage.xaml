@@ -42,7 +42,7 @@
                 Clicked="OnSaveRecipeButtonClicked"
                 FontSize="Medium"
                 FontAttributes="Bold"
-                BackgroundColor="#007AFF"
+                BackgroundColor="#FFA500"
                 TextColor="White"
                 Margin="0,20,0,0"
                 HeightRequest="50"

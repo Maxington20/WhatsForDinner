@@ -78,7 +78,8 @@
                 FontSize="Medium"
                 TextColor="White"
                 BackgroundColor="#FFA500"
-                Margin="10,5,0,5" />
+                Margin="10,5,0,5" 
+                CornerRadius="25"/>
     </Grid>
 
 </ContentPage>

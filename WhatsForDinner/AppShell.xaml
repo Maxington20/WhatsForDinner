@@ -24,14 +24,19 @@
                VerticalOptions="Center" />
     </Shell.FlyoutHeader>
 
+    <FlyoutItem Title="Meal Calendar"
+                Route="MealCalendarPage">
+        <ShellContent ContentTemplate="{DataTemplate pages:MealCalendarPage}" />
+    </FlyoutItem>
+
     <FlyoutItem Title="Generate From Ingredients"
                 Route="GenerateFromIngredientsPage">
         <ShellContent ContentTemplate="{DataTemplate pages:GenerateFromIngredientsPage}" />
     </FlyoutItem>
 
-    <FlyoutItem Title="Meal Calendar"
-                Route="MealCalendarPage">
-        <ShellContent ContentTemplate="{DataTemplate pages:MealCalendarPage}" />
+    <FlyoutItem Title="New Recipe"
+                Route="GenerateFromIngredientsPage">
+        <ShellContent ContentTemplate="{DataTemplate pages:NewRecipePage}" />
     </FlyoutItem>
 
 </Shell>

@@ -8,19 +8,19 @@
                 FontSize="24"
                 TextColor="White"
                 BackgroundColor="#FFA500"
-                CornerRadius="8"
+                CornerRadius="25"
                 Clicked="OnBreakfastClicked"/>
         <Button Text="Lunch"
                 FontSize="24"
                 TextColor="White"
                 BackgroundColor="#FFA500"
-                CornerRadius="8"
+                CornerRadius="25"
                 Clicked="OnLunchClicked"/>
         <Button Text="Dinner"
                 FontSize="24"
                 TextColor="White"
                 BackgroundColor="#FFA500"
-                CornerRadius="8"
+                CornerRadius="25"
                 Clicked="OnDinnerClicked"/>
     </StackLayout>
 
