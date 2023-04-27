@@ -42,12 +42,12 @@ public partial class NewRecipePage : ContentPage
             // navigate to the DayDetailPage passing the selected date
             Navigation.PushAsync(new DayDetailPage(SelectedDate));
         }
-        
+
         // else navigate back to the mainpage.xaml page
         else
         {
-            Navigation.PopAsync();
+            Application.Current.MainPage = new AppShell();
         }
-     
+
     }
 }
