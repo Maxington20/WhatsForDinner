@@ -5,75 +5,55 @@
              Title="Generate Recipe"
              BackgroundColor="White">
 
-    <Grid Margin="10">
+    <Grid Margin="20">
         <Grid.RowDefinitions>
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="*" />
-            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="Auto" />
-        </Grid.ColumnDefinitions>
-      
-        <CollectionView x:Name="RecipesListView"
-                    Grid.Row="1"
-                    Grid.ColumnSpan="2">
-            <CollectionView.ItemTemplate>
-                <DataTemplate>
-                    <Frame Padding="10"
-                       BackgroundColor="#FFA500"
-                       Margin="0,5"
-                       HasShadow="False"
-                       BorderColor="Transparent"
-                       HorizontalOptions="FillAndExpand">
-                        <Grid>
-                            <Grid.GestureRecognizers>
-                                <TapGestureRecognizer Tapped="OnRecipeTapped" />
-                            </Grid.GestureRecognizers>
-                            <Label Text="{Binding Name}"
-                               FontSize="Medium"
-                               TextColor="White"
-                               HorizontalOptions="FillAndExpand"
-                               VerticalOptions="Center" />
-                        </Grid>
-                    </Frame>
-                </DataTemplate>
-            </CollectionView.ItemTemplate>
-        </CollectionView>
 
-
-
-        <StackLayout Margin="5">
-            <Label Text="Desired Ingredients"
+        <Label Text="Desired Ingredients"
                FontSize="Medium"
                Margin="0,5,0,5"
                TextColor="#333333" 
                FontAttributes="Bold"/>
-            <Editor x:Name="IngredientsEditor"
-                Placeholder="Enter comma separated ingredients"
-                PlaceholderColor="#cccccc"
-                TextColor="#333333"
-                FontSize="Medium"
-                HeightRequest="60"
-                VerticalOptions="StartAndExpand" 
-                BackgroundColor="AliceBlue"/>
+        <Editor x:Name="IngredientsEditor"
+               Grid.Row="1"
+               Placeholder="Enter comma separated ingredients"
+               PlaceholderColor="#cccccc"
+               TextColor="#333333"
+               FontSize="Medium"
+               HeightRequest="60"
+               VerticalOptions="Start" 
+               BackgroundColor="AliceBlue"/>
+
+        <Grid Grid.Row="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
 
             <Label Text="Dietary Restrictions"
-               FontSize="Medium"
-               Margin="0,10,0,5"
-               TextColor="#333333" 
-               FontAttributes="Bold"/>
+                   FontSize="Medium"
+                   Margin="0,5,0,5"
+                   TextColor="#333333" 
+                   FontAttributes="Bold"/>
             <Editor x:Name="DietaryRestrictions"
-                Placeholder="i.e. vegan"
-                PlaceholderColor="#cccccc"
-                TextColor="#333333"
-                FontSize="Medium"
-                HeightRequest="60"
-                VerticalOptions="StartAndExpand" 
-                BackgroundColor="AliceBlue"/>
+                   Grid.Row="1"
+                   Placeholder="i.e. vegan"
+                   PlaceholderColor="#cccccc"
+                   TextColor="#333333"
+                   FontSize="Medium"
+                   HeightRequest="60"
+                   VerticalOptions="Start" 
+                   BackgroundColor="AliceBlue"/>
+        </Grid>
 
-            <Button Text="Generate"
+        
+
+        <Button Text="Generate"
                 x:Name="SaveRecipeButton"
                 Clicked="OnGenerateRecipesClicked"
                 FontSize="Medium"
@@ -84,8 +64,9 @@
                 HeightRequest="50"
                 CornerRadius="25"
                 HorizontalOptions="FillAndExpand"
-                VerticalOptions="End"/>
-        </StackLayout>
+                VerticalOptions="End"
+                Grid.Row="4"/>
     </Grid>
+
 
 </ContentPage>

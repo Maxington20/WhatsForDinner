@@ -13,7 +13,7 @@ public partial class GenerateFromIngredientsPage : ContentPage
 	{
         InitializeComponent();
         _recipes = new ObservableCollection<Recipe>();
-        RecipesListView.ItemsSource = _recipes;
+        //RecipesListView.ItemsSource = _recipes;
         BindingContext = this;
     }
 
@@ -23,7 +23,7 @@ public partial class GenerateFromIngredientsPage : ContentPage
         MealOfTheDay = mealOfTheDay;
         SelectedDate = selectedDate;
         _recipes = new ObservableCollection<Recipe>();
-        RecipesListView.ItemsSource = _recipes;
+        // RecipesListView.ItemsSource = _recipes;
         BindingContext = this;
     }
 
@@ -63,19 +63,5 @@ public partial class GenerateFromIngredientsPage : ContentPage
         public string Directions { get; set; }
         
         public string Ingredients { get; set; }
-    }
-
-    private void OnRemoveRecipeClicked(object sender, EventArgs e)
-    {
-        if (sender is Button removeButton)
-        {
-            var recipeToRemove = removeButton.CommandParameter as Recipe;
-            if (recipeToRemove != null)
-            {
-                // Remove the recipe from the collection.
-                // Assuming you have an ObservableCollection<Recipe> named Recipes
-                _recipes.Remove(recipeToRemove);
-            }
-        }
     }
 }
